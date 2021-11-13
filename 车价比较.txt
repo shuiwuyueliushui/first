@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+
+<script>
+function sss(){
+
+var a=document.getElementById("a").value;
+var b=document.getElementById("b").value;
+var c=0;
+var d="";
+var l="";
+for(var i=0;i<a.length;i++){
+	
+	if(a.charAt(i)==","){
+		
+		c=c+1;
+		continue;
+	}
+	
+	if(c==1){
+	
+	d=d+a.charAt(i);
+	
+	}
+	
+     if(c==3){
+	
+	l=l+a.charAt(i);
+	
+	}
+	
+}
+
+
+var e=0;
+var f="";
+var r="";
+for(var i=0;i<b.length;i++){
+	
+	if(b.charAt(i)==","){
+		
+		e=e+1;
+		continue;
+	}
+	
+	if(e==1){
+	
+	f=f+b.charAt(i);
+	
+	}
+	
+	
+	if(e==3){
+	
+	r=r+b.charAt(i);
+	
+	}
+	
+	
+}
+
+var t=parseInt(d);
+var s=parseInt(f);
+if(s==t){
+	alert("价格一致");
+	
+	
+}else{
+	 if(s>t){
+		 alert(r);
+	
+	 }else{
+		alert(l); 
+	 }
+
+
+
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+car1:<input  id="a"  type="text"  value=""  />
+car2:<input   id="b" type="text"  value=""  />
+<button onclick="sss()"  >提交</button>
+
+
+</body>
+</html>
